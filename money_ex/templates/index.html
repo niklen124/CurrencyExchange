@@ -5,114 +5,238 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="aks.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,700" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     {% load static %}
     <link rel="icon" href="{% static 'image/icons8-bank-48.png' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/rate_Table.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aks.css' %}">
+    <link rel="stylesheet" href="{% static 'css/spectre.css' %}">
+    <link rel="stylesheet" href="{% static 'css/spectre-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/spectre-exp.css' %}">
+    <link rel="stylesheet" href="{% static 'css/yeo.css' %}">
     <title>Money EX</title>
 </head>
+
 <body>
-    <div class="navbar">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Convertisseur</a>
-                    </li>
-                </ul>
-            </div>          
-        </nav>
-        
-    </div>
-
-    <div class="text">
-
-        <h1>Convertisseur de devises Money EX</h1>
-
-    </div>  
-
-
-
-    <div class="container">
-        <div class="container">
-            <div class="row">
-                
-                <div class="col input-group-text ">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Montant</span>
-                    </div>
-                    
-                    <input 
-                        type="text"
-                        class="form-control"
-                        id="amountOne"
-                        aria-label="Amount (to the nearest dollar)"
-                        placeholder="1,00"
-                    >
-                    <div class="input-group-append">
-                        <span class="input-group-text">$</span>
-                    </div>
-                    
+   
+    <div class="yeo-slogan">
+        <div class="container yeo-header">
+            <div class="columns">
+                <div class="column col-12">
+                    <header class="navbar">
+                        <section class="navbar-section">
+                            <a class="navbar-brand logo" href="#">
+                                <img src="{% static 'image/icons8-bank-96.png' %}" alt="Logo"><span style="color: #f0f0cd; ; font-weight: bold;">Money EX</span>
+                            </a>
+                            
+                        </section>
+                        <section class="navbar-section hide-sm">
+                            
+                            <a class="btn btn-link" href="#we-work">Historique</a>
+                            
+                            <a class="btn btn-link" href="#team">Convertisseur</a>
+                        </section>
+                    </header>
                 </div>
-                <div class="col input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">De</span>
-                        <input 
-                            type="text"
-                            class="form-control"
-                            id="comboInput1"
-                            list="currencyOne"
-                            placeholder="USD"
-                        >
-                        <datalist id="currencyOne">
-                            <option value="USD">
-                            <option value="EUR">
-                            <option value="URA">
-                        </datalist>
-                    </div>
-                    <div>
-                        <button type="button" id="swap" class="btn btn-outline-dark">Swap</button>
-                    </div>
-                    <div class="input-group-append">
-                        <span class="input-group-text">Vers</span>
-                        <input 
-                            type="text"
-                            class="form-control"
-                            id="comboInput2"
-                            list="currencyTwo"
-                            placeholder="EUR"
-                        >
-                        <datalist id="currencyTwo">
-                            <option value="USD">
-                            <option value="EUR">
-                            <option value="URA">
-                        </datalist>
+            </div>
+        </div>
+    <div class="container slogan">
+        <div class="columns">
+            <div class="column col-7 col-sm-12">
+                <div class="slogan-content">
+                    <h1>
+                        <span class="slogan-bold">Nous plaçons l'humain au cœur de nos solutions.</span>
+                    </h1>
+                    <p>Nous avons conçu un convertisseur de devises à fort impact, accessible à tous et permettant des 
+                        conversions instantanées entre plusieurs monnaies. 
+                        Grâce à des taux de change mis à jour en temps réel, nous offrons un outil fiable et
+                         simple à utiliser pour répondre aux besoins financiers de chacun, à l'échelle mondiale.
+
+                    </p>
+                    <a class="btn btn-primary btn-lg btn-start"
+                    href="#team" >Commencez une conversion aujourd'hui</a>
+    
+                </div>
+            </div>
+            <div class="column col-5 hide-sm">
+                <img class="slogan-img" src="{% static 'image/yeo-feature-1.svg' %}" alt="">
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <body>
+       
+        <div class="yeo-client">
+            <div class="container yeo-client-list">
+                <div class="columns">
+                    <div class="column col-12">
+                        <h3 class="feature-title">
+                            Reconnu Par Les Meilleurs Clients
+                        </h3>
+                        <div class="client-logo">
+                            <a href="https://www.algolia.com/">
+                                <img src="{% static 'image/algolia.svg' %}" height="40px" alt="Algolia">
+                            </a>
+                            <a href="https://www.lapa.ninja/">
+                                <img src="{% static 'image/lapa-logo.svg' %}" height="40px" alt="Lapa Logo">
+                            </a>
+                            <a href="https://gohugo.io/">
+                                <img src="{% static 'image/hugo.svg' %}" height="40px" alt="Hugo">
+                            </a>
+                            <a href="https://www.codecademy.com/pages/paid-plans">
+                                <img src="{% static 'image/codecademy.svg' %}" height="40px" alt="Codecademy">
+                            </a>
+                            <a href="https://aws.amazon.com/fr/" >
+                                <img src="{% static 'image/aws.svg' %}" height="40px" alt="AWS">
+                            </a>
+                            <a href="https://stripe.com/fr">
+                                <img src="{% static 'image/stripe.svg' %}" height="40px" alt="Stripe">
+                            </a>
+                            <a href="https://esagnde.org/">
+                                <img src="{% static 'image/LOGO-ESAG-NDE-418x440-1.jpg' %}" height="700px" alt="Stripe">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
-        <br>
-        <div class="" id="result" style="color: rgb(255, 55, 36);">OM</div>
-        <div class="rate" id="rate" style="color: blue;">OK</div>
-        <div class="text-center">
-            <button type="button" id="convert" class="btn btn-primary">Convertir</button>
+
+        <div class="yeo-work" id="we-work">
+            <div class="content">
+                <!-- Texte à gauche -->
+                <div class="text-content">
+                    <h1>Gérez vos devises où que vous soyez</h1>
+                    <p>Accédez à toutes les fonctionnalités essentielles pour la conversion de devises sur un site simple, 
+                        rapide et efficace. Profitez d'un outil conçu pour vous offrir des résultats précis en temps réel, 
+                        quel que soit le taux ou la devise recherchée. Simplifiez vos transactions internationales grâce à une 
+                        interface intuitive et accessible à tout moment.
+                         Notre site vous garantit une expérience fluide, fiable et adaptée à vos besoins quotidiens.</p>
+                   
+                </div>
+                <!-- Image à droite -->
+                
+            </div>
+            
         </div>
+        <div class="image-content">
+            <img src="{% static 'image/devise28.png' %}" alt="Capture d'écran téléphone">
+        </div>
+    <div class="container text-center my-5" id="team">
+        <h1>Convertisseur de devises Money EX</h1>
     </div>
     
 
+    <div class="container py-4">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <span class="input-group-text">Montant</span>
+                    <input type="text" class="form-control" id="amountOne" placeholder="1,00" aria-label="Amount">
+                    <span class="input-group-text">$</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-group">
+                    <span class="input-group-text">De</span>
+                    <input type="text" class="form-control" id="comboInput1" list="currencyOne" placeholder="USD">
+                    <datalist id="currencyOne">
+                        <option value="USD">Dollar américain (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="GBP">Livre sterling (GBP)</option>
+                        <option value="JPY">Yen japonais (JPY)</option>
+                        <option value="AUD">Dollar australien (AUD)</option>
+                        <option value="CAD">Dollar canadien (CAD)</option>
+                        <option value="CHF">Franc suisse (CHF)</option>
+                        <option value="CNY">Yuan chinois (CNY)</option>
+                        <option value="SEK">Couronne suédoise (SEK)</option>
+                        <option value="NZD">Dollar néo-zélandais (NZD)</option>
+                        <option value="MXN">Peso mexicain (MXN)</option>
+                        <option value="SGD">Dollar de Singapour (SGD)</option>
+                        <option value="HKD">Dollar de Hong Kong (HKD)</option>
+                        <option value="NOK">Couronne norvégienne (NOK)</option>
+                        <option value="KRW">Won sud-coréen (KRW)</option>
+                        <option value="TRY">Livre turque (TRY)</option>
+                        <option value="INR">Roupie indienne (INR)</option>
+                        <option value="RUB">Rouble russe (RUB)</option>
+                        <option value="BRL">Réel brésilien (BRL)</option>
+                        <option value="ZAR">Rand sud-africain (ZAR)</option>
 
-    
+                    </datalist>
+                    <button type="button" id="swap" class="btn btn-outline-secondary mx-2">
+                        <i class="bi bi-arrow-left-right"></i>
+                    </button>
+                    <span class="input-group-text">Vers</span>
+                    <input type="text" class="form-control" id="comboInput2" list="currencyTwo" placeholder="EUR">
+                    <datalist id="currencyTwo">
+                        <option value="USD">Dollar américain (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="GBP">Livre sterling (GBP)</option>
+                        <option value="JPY">Yen japonais (JPY)</option>
+                        <option value="AUD">Dollar australien (AUD)</option>
+                        <option value="CAD">Dollar canadien (CAD)</option>
+                        <option value="CHF">Franc suisse (CHF)</option>
+                        <option value="CNY">Yuan chinois (CNY)</option>
+                        <option value="SEK">Couronne suédoise (SEK)</option>
+                        <option value="NZD">Dollar néo-zélandais (NZD)</option>
+                        <option value="MXN">Peso mexicain (MXN)</option>
+                        <option value="SGD">Dollar de Singapour (SGD)</option>
+                        <option value="HKD">Dollar de Hong Kong (HKD)</option>
+                        <option value="NOK">Couronne norvégienne (NOK)</option>
+                        <option value="KRW">Won sud-coréen (KRW)</option>
+                        <option value="TRY">Livre turque (TRY)</option>
+                        <option value="INR">Roupie indienne (INR)</option>
+                        <option value="RUB">Rouble russe (RUB)</option>
+                        <option value="BRL">Réel brésilien (BRL)</option>
+                        <option value="ZAR">Rand sud-africain (ZAR)</option>
+                    </datalist>
+                </div>
+            </div>
+        </div>
+
+        <div id="result" class="text-danger text-center my-3"></div>
+        <input type="hidden" id="hidenResult" name="">
+        <div id="rate" class="text-primary text-center"></div>
+        <input type="hidden" id="hiddenRate" name="">
+
+        <div class="text-center mt-4">
+            <button type="button" id="convert" class="btn btn-primary">Convertir</button>
+        </div>
+    </div>
+
+    <div class="rateTable container my-5">
+        <div class="row">
+            <div class="col-md-6" id="swapTable">
+                <div id="initialConversText" class="textEx"></div>
+                <div id="rateTable" class="rateTable"></div>
+            </div>
+            <div class="col-md-6" id="swapRevTable">
+                <div id="reversConversText" class="textEx"></div>
+                <div id="reversRateTable" class="rateTable"></div>
+            </div>
+        </div>
+    </div>
+
     <script src="{% static 'js/script.js' %}"></script>
 </body>
+</div>
+</section>
+<div class="yeo-footer">
+  <div class="container">
+      <div class="columns">
+          <div class="column col col-sm-6">
+              <p style="text-align: center;margin-top: 30px;">Money EX Designed by Group 9 @2025</p>
+          </div>
+      </div>
+  </div>
+</div>
 </html>

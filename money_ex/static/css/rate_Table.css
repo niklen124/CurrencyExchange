@@ -1,0 +1,102 @@
+/* Style général pour la section des tables */
+.rateTable.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 20px auto;
+}
+
+/* Style pour les rangées */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Style pour les colonnes */
+.col-md-6 {
+    padding: 15px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .col-md-6 {
+        width: 48%;
+    }
+}
+
+/* Style pour le texte explicatif */
+.textEx {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.rateTable table{
+    width: 100%;
+}
+
+/* Style général pour les tables */
+.rateTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+/* Style pour les en-têtes de table */
+.rateTable th {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Style pour les cellules de table */
+.rateTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    color: #333;
+}
+
+/* Style pour les rangées alternées */
+.rateTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.rateTable tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Style pour les rangées au survol */
+.rateTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Style pour les bordures */
+.rateTable th, .rateTable td {
+    border: 1px solid #ddd;
+}
+
+/* Mise en forme des bordures et ombres */
+.rateTable {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .rateTable.container {
+        padding: 20px;
+    }
+
+    .rateTable th, .rateTable td {
+        padding: 8px;
+    }
+
+    .textEx {
+        font-size: 1rem;
+    }
+}
