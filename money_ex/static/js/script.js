@@ -45,13 +45,13 @@ function calculate(currencyOne, currencyTwo, amount) {
         .then(response => response.json())
         .then((data) => {
             const rate = data.rates[currencyTwo];
-            const RevRate = 1 / rate
+            const RevRate = (1 / rate).toFixed(2)
             if (rate) {
                 const convertedAmount = (amount * rate).toFixed(2);
                 theResult.innerText = `${amount} ${currencyOne} = ${convertedAmount} ${currencyTwo}`;
                 theHiddenResult.innerText = `${convertedAmount} ${currencyTwo} = ${amount} ${currencyOne}`;
                 theRate.innerText = `1 ${currencyOne} = ${rate} ${currencyTwo}`;
-                theHiddenRate.innerText = `1 ${currencyTwo} = ${rate} ${currencyOne}`;
+                theHiddenRate.innerText = `1 ${currencyTwo} = ${RevRate} ${currencyOne}`;
                 theConversText.innerHTML = `<h3>Convertir <strong>${currencyOne}</strong> en <strong>${currencyTwo}</strong></h3>`;
                 theReversConversText.innerHTML = `<h3>Convertir <strong>${currencyTwo}</strong> en <strong>${currencyOne}</strong></h3>`;
                 
