@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="aks.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,700" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     {% load static %}
     <link rel="icon" href="{% static 'image/icons8-bank-48.png' %}">
@@ -135,6 +136,9 @@
     
 
     {% block content %}
+    {% endblock %}
+
+    {% block graphContent %}
     {% endblock %}
 
     <script src="{% static 'js/script.js' %}"></script>

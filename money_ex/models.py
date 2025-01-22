@@ -7,7 +7,7 @@ class CurrencyConversion(models.Model):
     conversion_rate = models.DecimalField(max_digits=20, decimal_places=6)
     converted_amount = models.DecimalField(max_digits=20, decimal_places=2)
     timestamp = models.DateTimeField(auto_now_add=True)
-    date = models.DateField()
+    date = models.DateField(auto_now_add=True)
     
     class Meta:
         ordering = ['-timestamp']
