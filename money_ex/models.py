@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class CurrencyConversion(models.Model):
     amount = models.DecimalField(max_digits=20, decimal_places=2)
     from_currency = models.CharField(max_length=3)

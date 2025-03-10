@@ -1,8 +1,34 @@
-{% extends "layouts/base.html" %}
+{% extends "layouts/graphLayout.html" %}
 
-{% block "graphContent" %}
+{% block graphContent %}
 
-<h1>Graphique des Taux de Change</h1>
-<div>{{ chart|safe }}</div>
+<h1 id="textRateGraph">Graphiques de change Xe</h1>
+<input type="hidden" id="swapTextRateGraph">
+
+    <div class="row">
+        <div class="form-group">
+            <label for="fromCurrency">De</label>
+            <select id="fromCurrency">
+                {% for code, name in currencies.items %}
+                    <option value="{{ code }}">{{ code }} - {{ name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    
+        <button type="button" id="swap" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left-right"></i>
+        </button>
+    
+        <div class="form-group">
+            <label for="toCurrency">Vers</label>
+            <select id="toCurrency">
+                {% for code, name in currencies.items %}
+                    <option value="{{ code }}">{{ code }} - {{ name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+
+    <canvas id="exchangeRateChart"></canvas>
 
 {% endblock %}

@@ -1,0 +1,108 @@
+/* Style général pour la section */
+#textRateGraph {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Espacement du titre et autres éléments */
+#swapTextRateGraph {
+    display: none;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+select {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s ease-in-out;
+}
+
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button#swap {
+    background-color: #fff;
+    border-color: #007bff;
+    color: #007bff;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button#swap:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Style pour le graphique */
+canvas#exchangeRateChart {
+    margin-top: 2rem;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style pour le conteneur du formulaire */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+/* Ajouter un peu d'ombre au conteneur pour un effet de profondeur */
+.form-container .form-group {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    width: 80%;
+    max-width: 400px;
+}
+
+/* Ajouter un peu d'espacement pour ne pas que les éléments soient trop proches */
+.form-group select,
+button#swap {
+    margin-top: 1rem;
+}
+
+/* Pour les icônes, augmenter la taille et les espacer correctement */
+button#swap i {
+    font-size: 1.5rem;
+}
+
+/* S'assurer que tout s'adapte bien sur mobile */
+@media (max-width: 767px) {
+    #textRateGraph {
+        font-size: 1.5rem;
+    }
+
+    .form-container {
+        padding: 1rem;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    button#swap {
+        font-size: 1.2rem;
+    }
+}

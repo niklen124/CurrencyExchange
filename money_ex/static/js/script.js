@@ -55,6 +55,7 @@ function calculate(currencyOne, currencyTwo, amount) {
                 theConversText.innerHTML = `<h3>Convertir <strong>${currencyOne}</strong> en <strong>${currencyTwo}</strong></h3>`;
                 theReversConversText.innerHTML = `<h3>Convertir <strong>${currencyTwo}</strong> en <strong>${currencyOne}</strong></h3>`;
                 
+                updateResult()
                 createTable(currencyOne, currencyTwo, rate);
                 createReversTable(currencyOne, currencyTwo, RevRate);
             } else {
@@ -67,6 +68,17 @@ function calculate(currencyOne, currencyTwo, amount) {
         });
 }
 
+function updateResult() {
+    const amount = parseFloat(amountInput.value);
+    const currencyOne = currencyOneInput.value;
+    const currencyTwo = currencyTwoInput.value;
+    const convertedAmount = (amount * rate).toFixed(2);
+    
+    theResult.innerText = `${amount} ${currencyOne} = ${convertedAmount} ${currencyTwo}`;
+    theHiddenResult.innerText = `${convertedAmount} ${currencyTwo} = ${amount} ${currencyOne}`;
+    theRate.innerText = `1 ${currencyOne} = ${rate} ${currencyTwo}`;
+    theHiddenRate.innerText = `1 ${currencyTwo} = ${RevRate} ${currencyOne}`;
+}
 
 // Create conversion table
 function createTable(currencyOne, currencyTwo, rate) {

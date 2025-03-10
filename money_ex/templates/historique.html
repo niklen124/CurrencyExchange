@@ -1,6 +1,7 @@
 {% extends "layouts/historiqueLayout.html" %}
 
 {% block content %}
+{% load static %}
 
 <div class="container py-5">
     <h2 class="text-center mb-4">Historique des Conversions</h2>
@@ -15,6 +16,7 @@
                     <th>Vers</th>
                     <th>Taux</th>
                     <th>Montant Converti</th>
+                    <th>Suppression</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,6 +28,11 @@
                     <td>{{ conversion.to_currency }}</td>
                     <td>{{ conversion.conversion_rate }}</td>
                     <td>{{ conversion.converted_amount }}</td>
+                    <td>
+                        <a href="{% url 'supprimer_conversion' conversion.id %}">
+                            <img src="{% static 'image/bouton-supprimer.png' %}" alt="Supprimer">
+                        </a>
+                    </td>
                 </tr>
                 {% empty %}
                 <tr>

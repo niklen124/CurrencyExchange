@@ -1,0 +1,46 @@
+{% extends 'layouts/usersLayout.html' %}
+{% load static %}
+{% block content %}
+               <div class="container mt-5">
+                <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                    <div class="text-center">
+                        <h5 class="card-title">Inscription</h5>
+                    </div>
+                    <div class="card-body">
+                    <form method="POST" action="">
+                        {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Entrez un nom d'utilisateur</label>
+                        <input type="text" class="form-control" id="Username" aria-describedby="usernameHelp" name="username" required>
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        {% if errors.username %}
+                        <small class="text-danger" >{{errors.username}}</small>
+                        {% endif%}
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label" >Entrez un mot de passe</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="pasword" required>
+                        {% if errors.passwords %}
+                        <small class="text-danger" >{{errors.passwords}}</small>
+                        {% elif  errors.pasword_length%}
+                        <small class="text-danger" >{{errors.pasword_length}}</small>
+                        {% endif %}
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label" >Confirmez votre mot de passe</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="pasword2" required>
+                        {% if errors.passwords %}
+                        <small class="text-danger">{{errors.passwords}}</small>
+                        {% elif  errors.pasword_length%}
+                        <small class="text-danger" >{{errors.pasword_length}}</small>
+                        {% endif %}
+                    </div>
+                <div class="container d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary rounded-sm btn-lg">S'inscrire</button>
+                <a href="{% url 'login' %}">Déja inscrit? Se connecter </a>
+                </div>  
+            </form>
+            </div>
+        </div>
+        </div>
+{% endblock %}

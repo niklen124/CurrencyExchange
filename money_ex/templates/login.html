@@ -1,0 +1,38 @@
+{% extends 'layouts/usersLayout.html' %}
+{% load static %}
+{% block content %}
+               <div class="container mt-5">
+                <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                    <div class="text-center">
+                        <h5 class="card-title">connexion</h5>
+                    </div>
+                    <div class="card-body">
+                    <form method="POST" action="">
+                        {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label" >Username</label>
+                        <input type="text" class="form-control" id="Username" aria-describedby="usernameHelp" name="username" required>
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label" >Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="pasword" required>
+                    </div>
+                <div class="container d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary rounded-sm btn-lg">login</button>
+                <a href="{% url 'register' %}">Pas de compte ? Inscrivez-vous </a>
+                </div>  
+                {% if messages %}
+                <div class="mt-4">
+                    {% for message in messages %}
+                    <div class="p-4 mb-4 text-white bg-warning rounded-2">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                </div> 
+                {% endif %}
+            </form>
+            </div>
+        </div>
+        </div>
+{% endblock %}
